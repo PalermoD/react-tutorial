@@ -13,7 +13,7 @@
   </head>
   <body>
     <div id="content"></div>
-    
+     
     <script type="text/babel">
        var Comment = React.createClass({
           render: function(){
@@ -25,7 +25,7 @@
                   {this.props.children}
               </div>
               );
-           }
+            }
         });
 
 
@@ -48,6 +48,7 @@
                     <div className="commentList" >
                       <Comment author="Pete Hunt">This is one comment</Comment>
                       <Comment author="Palermo Deschamps"> This is another comment </Comment>
+                      <Comment author="Julian Ages"> This is the 3rd comment </Comment>
                     </div>
                   );
               }
@@ -57,18 +58,22 @@
           render: function(){
             return(
               <div className="commentForm">
-              Hello, world, I am a comment commentForm
+                <h2>
+                  Hello, world, I am a comment form
+                </h2>
               </div>
             );
           }
         });
+        
 
+        //renders componets in view 
         ReactDOM.render(
           < CommentBox />,
           document.getElementById('content')
-          );
+        );
 
-    </script>.
+    </script>
 
   </body>
 </html>
